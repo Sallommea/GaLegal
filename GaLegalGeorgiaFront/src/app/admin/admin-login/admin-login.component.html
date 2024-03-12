@@ -1,0 +1,61 @@
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+<section *ngIf="!isLoading" class="login-section flex-column">
+  <h1 *ngIf="error === null" class="mb-5">
+    {{ "LOGIN.TITLE" | translate }}
+  </h1>
+  <h1 *ngIf="error" class="error-message mb-5">{{ error }}</h1>
+  <div class="container flex-center login-form">
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="flex-column">
+      <div class="form-group mb-5">
+        <label for="exampleInputEmail1" class="pb-3">{{
+          "LOGIN.EMAIL" | translate
+        }}</label>
+        <input
+          #email="ngModel"
+          [(ngModel)]="credentials.email"
+          type="email"
+          name="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="{{ 'LOGIN.EMAILPLACEHOLDER' | translate }}"
+          required
+          pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        />
+        <p
+          class="text-red"
+          *ngIf="email.errors && email.touched && email.dirty"
+        >
+          {{ "LOGIN.EMAILERROR" | translate }}
+        </p>
+      </div>
+      <div class="form-group mb-5">
+        <label for="exampleInputPassword1" class="pb-3">
+          {{ "LOGIN.PASSWORD" | translate }}</label
+        >
+        <input
+          name="password"
+          required
+          type="password"
+          [(ngModel)]="credentials.password"
+          #password="ngModel"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="{{ 'LOGIN.PASSPLACEHOLDER' | translate }}"
+        />
+        <p
+          class="text-red"
+          *ngIf="password.errors && password.touched && password.dirty"
+        >
+          {{ "LOGIN.PASSWORDERROR" | translate }}
+        </p>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn">
+          {{ "LOGIN.LOGIN" | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<hr />

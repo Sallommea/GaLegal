@@ -1,0 +1,61 @@
+.heading {
+  font-size: 2.2rem;
+  font-family: "NotoSansGeorgian-Bold";
+  cursor: pointer;
+  padding-bottom: 0 !important;
+}
+
+/* Form */
+
+.card {
+  background-color: #333333;
+  padding: 1rem 1rem;
+  margin-top: -1.5rem;
+}
+
+.card-header {
+  color: #ffffffbe;
+  font-size: 2rem;
+  font-family: "NotoSansGeorgian-Regular";
+  padding-top: 2rem;
+}
+.form-label {
+  color: #ffffffbe;
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.input:focus {
+  color: #ffffffbe;
+  background-color: #333333;
+  border-bottom: 0.1px groove #e5ba2c90;
+  outline: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.input {
+  padding: 0.5rem 0rem;
+  color: #ffffffbe;
+  background-color: #333333;
+  border: none;
+  outline: none;
+  border-bottom: 0.1px groove #e5ba2c57;
+  font-size: 1.6rem;
+}
+
+.btn-details {
+  font-family: "NotoSansGeorgian-Regular";
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+.submit {
+  background-color: rgb(226, 178, 21);
+  color: #333333;
+}
+.submit:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #e5ba2c;
+}

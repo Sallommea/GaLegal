@@ -1,0 +1,29 @@
+<div class="grid-item">
+  <button
+    [type]="type"
+    class="flex-center"
+    (mouseenter)="showbutton = 'show'"
+    (mouseleave)="showbutton = 'hide'"
+    (click)="onContactUs()"
+  >
+    <ng-content></ng-content>
+
+    <div
+      class="btnn"
+      [ngClass]="{
+        'scale-in': showbutton === 'show',
+        'scale-out': showbutton === 'hide'
+      }"
+    >
+      <img
+        class="arrow"
+        [ngClass]="{
+          'scale-in': showbutton === 'show',
+          'scale-out': showbutton === 'hide'
+        }"
+        src="../../assets/arrow-forward-outline.svg"
+        alt=""
+      />
+    </div>
+  </button>
+</div>

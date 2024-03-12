@@ -1,0 +1,36 @@
+<h1 class="mt-5">{{ "ADMIN.PRACTICEAREAS" | translate }}</h1>
+<div class="flex-column mb-5">
+  <div class="row mb-5 flex-end-item">
+    <button (click)="addNew()" class="btn-add-new">
+      {{ "ADMIN.ADDNEWAREA" | translate }}
+    </button>
+  </div>
+  <div class="container practice-table">
+    <div class="table_wrapper">
+      <table class="table">
+        <thead>
+          <tr class="head">
+            <th class="id_name">ID</th>
+            <th class="id_name">{{ "NAV.PRACTICEAREAS" | translate }}</th>
+            <th>{{ "ADMIN.VIEWDETAILS" | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="practice-row"
+            *ngFor="let area of practiceAreas$ | async; let i = index"
+          >
+            <td class="id_name" data-label="ID">{{ i + 1 }}</td>
+            <td data-label="Practice Area">{{ area.title }}</td>
+            <td data-label="Details" class="td-actions">
+              <a [routerLink]="'practicearea/' + area.id" class="btn-details">{{
+                "ADMIN.DETAILS" | translate
+              }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<app-add-practice-area-modal></app-add-practice-area-modal>

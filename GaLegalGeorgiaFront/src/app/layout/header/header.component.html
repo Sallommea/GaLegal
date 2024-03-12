@@ -1,0 +1,125 @@
+<header class="header-background">
+  <div class="container-custom header">
+    <div class="flex-center hello">
+      <img class="main-logo" src="../../assets/logo.png" alt="" />
+      <div class="name">
+        <a routerLink="./" class="a-galegal">GA LEGAL</a>
+        <a routerLink="./" class="a-georgia">GEORGIA</a>
+      </div>
+    </div>
+    <div class="flex-center">
+      <nav class="nav" *ngIf="true">
+        <div class="div" (click)="openNav()">
+          <div class="menu-icon" [class.nav_icon_Class]="navVariable">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="main-nav" [class.navClass]="navVariable">
+          <ul class="main-nav-list">
+            <li>
+              <a
+                class="main-nav-link btn-link"
+                routerLinkActive="active"
+                routerLink="about"
+                (click)="navVariable = false"
+              >
+                <div class="btn-content">
+                  <div class="btn-text">
+                    <span> {{ "NAV.ABOUT" | translate }}</span>
+                  </div>
+                </div></a
+              >
+            </li>
+            <li>
+              <a
+                class="main-nav-link btn-link"
+                routerLink="practiceareas"
+                routerLinkActive="active"
+                (click)="navVariable = false"
+              >
+                <div class="btn-content">
+                  <div class="btn-text">
+                    <span>{{ "NAV.PRACTICEAREAS" | translate }}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="main-nav-link btn-link"
+                routerLink="contactus"
+                routerLinkActive="active"
+                (click)="navVariable = false"
+              >
+                <div class="btn-content">
+                  <div class="btn-text">
+                    <span> {{ "NAV.CONTACT" | translate }}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="main-nav-list no-padding nav-icons">
+            <li>
+              <div class="icons">
+                <a
+                  class="social-media-icon"
+                  href="https://www.facebook.com/people/GA-Legal-Georgia/100089353555116/"
+                  target="_blank"
+                >
+                  <img
+                    class="icon"
+                    src="../../../assets/logo-facebook (1).svg"
+                    alt="Facebook"
+                  />
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="icons">
+                <a
+                  class="social-media-icon"
+                  href="https://www.instagram.com/galegalgeorgia/"
+                  target="_blank"
+                >
+                  <img
+                    class="icon"
+                    src="../../../assets/logo-instagram (1).svg"
+                    alt="Instagram"
+                  />
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="icons">
+                <a
+                  class="social-media-icon"
+                  href="https://www.linkedin.com/company/ga-legal-georgia/"
+                  target="_blank"
+                >
+                  <img
+                    class="icon"
+                    src="../../../assets/logo-linkedin (1).svg"
+                    alt="Linkedin"
+                  />
+                </a>
+              </div>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="select">
+        <select class="custom-select" (change)="changeLanguage($event)">
+          <option value="ge" [selected]="lang == 'ge'">GE</option>
+          <option value="en" [selected]="lang == 'en'">EN</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</header>

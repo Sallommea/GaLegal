@@ -1,0 +1,38 @@
+<div
+  class="ng-cloak"
+  class="modal-position"
+  id="modal"
+  [ngClass]="{ hidden: !modal.isModalOpen(modalID) }"
+>
+  <div class="modal-background">
+    <div
+      class="overlay-fixed animateOverlayShow"
+      [ngClass]="{ animateOverlayShow: modal.isModalOpen(modalID) }"
+    >
+      <div
+        class="overlay-absolute opacity75"
+        [ngClass]="{ opacity75: close }"
+        (click)="closeModal()"
+      ></div>
+    </div>
+    <span class="centering-modal">&#8203; </span>
+    <div
+      [ngClass]="{ animateShowModal: modal.isModalOpen(modalID) }"
+      class="modal-box overflow-hidden animateShowModal"
+    >
+      <div class="modal-content">
+        <div class="modal-title">
+          <ng-content select="[heading]"></ng-content>
+          <div
+            *ngIf="close"
+            class="modal-close cursor-pointer z-50"
+            (click)="closeModal()"
+          >
+            &#x2715;
+          </div>
+        </div>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<app-modal modalID="addPracticeArea" [close]="true">
+  <h1 class="heading" heading>{{ "ADMIN.ADDNEW" | translate }}</h1>
+  <div class="info-sent-content">
+    <form [formGroup]="practiceAreaForm" (ngSubmit)="onSubmit()" class="card">
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">{{ "ADMIN.TITLE" | translate }}</label>
+          <input
+            formControlName="title"
+            type="text"
+            class="form-control input"
+            maxlength="70"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">{{ "ADMIN.CONTENT" | translate }}</label>
+          <input
+            formControlName="content"
+            type="text"
+            class="form-control input"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">{{ "ADMIN.TITLEINENG" | translate }}</label>
+          <input
+            formControlName="titleEn"
+            type="text"
+            class="form-control input"
+            maxlength="70"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">{{
+            "ADMIN.CONTENTINENG" | translate
+          }}</label>
+          <input
+            formControlName="contentEn"
+            type="text"
+            class="form-control input"
+          />
+        </div>
+      </div>
+      <div class="card-footer text-muted">
+        <button type="submit" class="btn-details submit">
+          {{ "ADMIN.SUBMIT" | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+</app-modal>

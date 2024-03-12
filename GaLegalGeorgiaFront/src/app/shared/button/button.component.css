@@ -1,0 +1,105 @@
+.grid-item button {
+  padding: 1.6rem 2rem;
+  border-radius: 6.25rem;
+  position: relative;
+  gap: 2rem;
+  background: #ffffffbe;
+  border: none;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "NotoSansGeorgian-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  transition: all 0.5s cubic-bezier(0.3, 1, 0.3, 1);
+  width: 35rem;
+}
+.grid-item button:hover {
+  color: #333333b0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.074);
+}
+
+.btnn {
+  max-width: 4rem;
+  cursor: pointer;
+  border: 0;
+  background: #fff;
+  padding: 2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  outline: 0;
+  border-radius: 50%;
+  white-space: nowrap;
+  max-height: 4rem;
+  transition: all 0.5s cubic-bezier(0.3, 1, 0.3, 1);
+}
+.arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: rotate(30deg);
+}
+
+.arrow.scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.3, 1, 0.3, 1) forwards;
+}
+.arrow.scale-out {
+  animation: scaleOut 0.5s ease forwards;
+}
+
+.btnn.scale-in {
+  animation: changeColor 0.5s ease forwards;
+}
+.btnn.scale-out {
+  animation: changeBackColor 0.5s ease forwards;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #e3b0199f;
+  }
+}
+
+@keyframes changeBackColor {
+  0% {
+    background: #e3b0199f;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@media only screen and (max-width: 432px) {
+  .grid-item button {
+    padding: 0.5rem 0.5rem;
+
+    gap: 2rem;
+
+    font-size: 1.2rem;
+
+    width: 25rem;
+  }
+}

@@ -1,0 +1,82 @@
+.modal-position {
+  position: fixed;
+  z-index: 50;
+  inset: 0px;
+  overflow-y: auto;
+}
+.modal-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.overlay-fixed {
+  position: fixed;
+  inset: 0px;
+}
+.overlay-absolute {
+  position: absolute;
+  inset: 0px;
+  background-color: #333333a2;
+}
+.centering-modal {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50vh;
+}
+.modal-box {
+  z-index: 50;
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: #f5f2ef;
+  border-radius: 0.5rem;
+  text-align: left;
+  vertical-align: middle;
+  width: 45%;
+}
+.modal-content {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  text-align: left;
+}
+.modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+
+.opacity75 {
+  opacity: 0.75;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.modal-close {
+  color: #333333;
+  font-size: 2.6rem;
+  cursor: pointer;
+  z-index: 50;
+}
+.hidden {
+  visibility: hidden;
+}
+@media only screen and (max-width: 870px) {
+  .modal-box {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 586px) {
+  .modal-box {
+    width: 100%;
+  }
+}

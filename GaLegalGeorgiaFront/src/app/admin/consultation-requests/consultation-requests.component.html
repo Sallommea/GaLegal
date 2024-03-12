@@ -1,0 +1,56 @@
+<div class="container">
+  <h1 class="mt-5 mb-5">{{ "ADMIN.CONSULTATIONREQUEST" | translate }}</h1>
+
+  <div class="practice-table">
+    <div class="table_wrapper">
+      <table class="table">
+        <thead>
+          <tr class="head">
+            <th class="id_name">{{ "ADMIN.STATUS" | translate }}</th>
+            <th class="id_name">{{ "ADMIN.MESSAGES" | translate }}</th>
+            <th>{{ "ADMIN.SEEMESSAGE" | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="practice-row"
+            *ngFor="let request of consultationRequests; let i = index"
+          >
+            <td class="id_name" data-label="Status">
+              <img
+                *ngIf="request.messageStatus === 'new'"
+                src="../../../assets/new-message.png"
+                alt=""
+              />
+              <img
+                *ngIf="request.messageStatus === 'read'"
+                src="../../../assets/checkmark-done.svg"
+                alt=""
+              />
+            </td>
+            <td data-label="Email" (click)="deleteForm()">
+              {{ request.email }}
+            </td>
+            <td data-label="Message" class="td-actions">
+              <a
+                [routerLink]="'consultationrequest/' + request.id"
+                class="btn-details"
+                >{{ "ADMIN.DETAILS" | translate }}</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ul class="pagination pagination-lg mt-3">
+    <li class="page-item" *ngFor="let page of pagesArray">
+      <a
+        class="page-link"
+        [ngClass]="{ active: page === currentPage }"
+        (click)="goToPage(page)"
+        >{{ page }}</a
+      >
+    </li>
+  </ul>
+</div>

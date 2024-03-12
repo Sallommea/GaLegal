@@ -1,0 +1,396 @@
+.yellow-bc {
+  background: #333333;
+  color: #ffffffbe;
+}
+section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.red-bc {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(90, 70, 5, 0.472),
+      rgba(26, 26, 26, 0.563)
+    ),
+    url(../../../assets/focus-closeup-business-contract-paper-with-pen-with-blur-handshaking-prodigy_31965-152680.jpg);
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  height: 80rem;
+
+  background-size: cover;
+  color: #ffffffbe;
+}
+
+.welcome-message {
+  max-width: 70rem;
+  text-align: left;
+  font-family: "NotoSansGeorgian-Regular";
+  font-weight: 200;
+  /* padding-bottom: 6rem;
+  margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 3rem;
+  animation: slideUp 2s ease 0s 1 normal both;
+  height: 85%;
+}
+.vax {
+  height: 100%;
+  /* background-color: red; */
+}
+.number {
+  font-size: 1.8rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.welcome-message h1 {
+  font-size: 3.6rem;
+  font-family: "NotoSansGeorgian-Bold";
+}
+.contact-info {
+  animation: slideIn 1s ease 0s 1 normal both;
+}
+.main {
+  width: 100%;
+}
+.mobile {
+  border: solid 2px #e3b0199f;
+  border-radius: 6.25rem;
+  transition: all 0.5s;
+  padding: 1rem 0rem;
+  cursor: pointer;
+  color: #ffffffa2;
+
+  font-family: "NotoSansGeorgian-Regular";
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background-color: #3c3c3c1b;
+}
+.mobile:hover {
+  background-color: #e3b0196b;
+  cursor: pointer;
+  color: #333333f6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.34);
+}
+.contact-us {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.grid-item a {
+  /* background-color: #cba013; */
+  padding: 1.5rem 2rem;
+  /* border: solid 2px #cba013; */
+  border-radius: 6.25rem;
+  position: relative;
+  gap: 1rem;
+  background: #ffffffbe;
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "NotoSansGeorgian-Regular";
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+.grid-item a:hover {
+  color: #333333b0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.074);
+}
+
+/* section 2 */
+
+.section-2-title {
+  font-family: "NotoSansGeorgian-Extralight";
+  font-size: 3.6rem;
+  color: #333333;
+  font-weight: 200;
+  padding: 4rem 2rem;
+}
+
+.album-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECTION THREE */
+form {
+  margin: 2rem auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form--grid {
+  grid-column-gap: 1.875rem;
+  grid-row-gap: 1.875rem;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  font-style: normal;
+  width: 100%;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  /* grid-auto-columns: 1fr; */
+  display: grid;
+}
+.yellow-bc {
+  display: flex;
+  padding-bottom: 8rem;
+}
+
+.input-name {
+  /* padding-right: 3rem; */
+}
+.input-lastname {
+  /* padding-left: 3rem; */
+}
+.container-custom {
+  /* background: red; */
+}
+textarea {
+  width: 100%;
+  border: transparent;
+  border-bottom: 1px solid #f5f2ef5f;
+  width: 100%;
+  background-color: inherit;
+  color: #ffffffbe;
+}
+textarea:active,
+textarea:focus,
+textarea:hover {
+  outline: none;
+  color: #f5f2ef;
+  /* border-bottom: #f5f2ef; */
+}
+textarea:focus {
+  border-bottom: 1px solid #e3b0199f;
+}
+.textarea {
+  align-items: flex-start;
+  grid-area: span 1 / span 2 / span 1 / span 2;
+}
+
+.form-grid {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  /* background-color: #cba013; */
+  width: 100%;
+}
+.form-layout-grid {
+  /* grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr; */
+  /* grid-auto-columns: 1fr; */
+}
+
+.head-2 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 3.125rem;
+  padding: 0 6rem;
+  font-family: inherit;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 1.2em;
+  font-family: "NotoSansGeorgian-Extralight";
+}
+.form-section {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 0.625rem;
+  display: flex;
+  font-family: "NotoSansGeorgian-Light";
+}
+.form-title {
+  margin-bottom: 3.125rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1.5em;
+}
+.form {
+  width: 100%;
+  /* max-width: 62.5rem; */
+  background-color: transparent;
+  padding: 0;
+}
+.asterix-form {
+  color: #cba013;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1392px) {
+  .form-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+@media only screen and (max-width: 1258px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1286px) {
+  /* .form--grid {
+    grid-template-columns: 1fr;
+  } */
+  .section-2-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .mobile {
+    padding: 1.6rem 2rem;
+    border-radius: 6.25rem;
+    position: relative;
+    width: 35rem;
+    height: 7.2rem;
+  }
+  .form--grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .head-2 {
+    font-size: 1.8rem;
+    padding: 0 0.5rem;
+  }
+  .form-title {
+    font-size: 1.6rem;
+  }
+  .form {
+    /* background-color: red; */
+    width: 100%;
+  }
+  .welcome-message h1 {
+    font-size: 2.2rem;
+  }
+  .welcome-message h2 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-height: 892px) {
+  .red-bc {
+    height: 70rem;
+  }
+}
+@media only screen and (max-height: 761px) {
+  .red-bc {
+    height: 60rem;
+  }
+}
+@media only screen and (max-height: 650px) {
+  .red-bc {
+    height: 50rem;
+  }
+}
+
+@media only screen and (max-width: 432px) {
+  .form--grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    width: 100%;
+  }
+
+  .container-custom {
+    padding: 0 0.5rem;
+  }
+  .section-2-title {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+  }
+  .mobile {
+    padding: 0.5rem 0.5rem;
+
+    font-size: 1.2rem;
+
+    width: 25rem;
+    height: 5rem;
+  }
+  .contact-us {
+    font-size: 1.2rem;
+  }
+  .number {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  .container-custom {
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+  .form-grid {
+    max-width: 100%;
+  }
+  .head-2 {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+    max-width: 250px;
+  }
+  .form-title {
+    max-width: 250px;
+    font-size: 1.4rem;
+  }
+  textarea::placeholder {
+    font-size: 1.2rem;
+  }
+  .mobile {
+    padding: 0.5rem 0.5rem;
+
+    font-size: 1.2rem;
+
+    width: 25rem;
+    height: 5rem;
+  }
+  .contact-us {
+    font-size: 1.2rem;
+  }
+  .number {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+}

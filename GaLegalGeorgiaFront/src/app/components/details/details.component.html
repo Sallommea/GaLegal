@@ -1,0 +1,10 @@
+<app-modal modalID="details" [close]="true">
+  <a heading>{{ title }}</a>
+  <div class="info-sent-content">
+    <ul>
+      <li *ngFor="let item of description">{{ item }}</li>
+    </ul>
+
+    <h1></h1>
+  </div>
+</app-modal>

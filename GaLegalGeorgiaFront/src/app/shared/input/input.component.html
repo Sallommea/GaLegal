@@ -1,0 +1,34 @@
+<div style="position: relative" class="flex-column">
+  <label class="mb-2">
+    <ng-content select="[title]"></ng-content>
+  </label>
+  <input
+    type="{{ type }}"
+    class="fomr-control shadow-none"
+    placeholder="{{ placeholder }}"
+    [formControl]="control"
+    maxlength="{{ maxlength }}"
+  />
+  <ng-container *ngIf="control?.touched || isSubmitAttempted">
+    <span class="hint" select="hint" *ngIf=" control?.errors?.['required']">
+      <ng-content select="[hint]"></ng-content>
+    </span>
+    <span
+      class="hint"
+      select="minlength"
+      *ngIf=" control?.errors?.['minlength']"
+    >
+      <ng-content select="[minlength]"></ng-content>
+    </span>
+    <span
+      class="hint"
+      select="hint"
+      *ngIf=" control?.errors?.['correctNumber'] && control?.dirty"
+    >
+      <ng-content select="[invalidnumber]"></ng-content>
+    </span>
+    <span class="hint" select="hint" *ngIf=" control?.errors?.['email']">
+      <ng-content select="[invalidemail]"></ng-content>
+    </span>
+  </ng-container>
+</div>

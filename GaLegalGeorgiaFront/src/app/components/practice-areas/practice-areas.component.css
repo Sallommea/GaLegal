@@ -1,0 +1,104 @@
+.section-2-title {
+  font-family: "NotoSansGeorgian-Extralight";
+  font-size: 3.6rem;
+  color: #333333;
+  font-weight: 200;
+  padding: 4rem 2rem;
+}
+
+.yellow-bc {
+  background: #333333;
+  color: #ffffffbe;
+  padding: 4rem;
+  margin-left: 20%;
+  border-radius: 1.6rem 0 0 1.6rem;
+}
+.margin-bottom {
+  margin-bottom: 50rem;
+}
+h1 {
+  font-size: 5.4rem;
+  font-family: "NotoSansGeorgian-Light";
+  /* padding: 2rem; */
+}
+
+.section-1 {
+  padding-bottom: 5rem;
+}
+
+.content p {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.content {
+  gap: 3rem;
+}
+.album-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sector-2-content {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-family: "NotoSansGeorgian-Regular";
+  gap: 3rem;
+}
+img {
+  width: 3rem;
+}
+li {
+  display: flex;
+  /* align-items: flex-start; */
+  gap: 2.5rem;
+}
+@media only screen and (max-width: 1286px) {
+  .section-2-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 3.2rem;
+  }
+  .row {
+    margin: 0;
+  }
+  .content p {
+    font-size: 1.8rem;
+  }
+
+  .container-custom {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 921px) {
+  .yellow-bc {
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .content p {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 432px) {
+  .section-2-title {
+    font-size: 1.8rem;
+    padding: 3rem 0;
+  }
+  .yellow-bc {
+    padding: 1rem;
+  }
+  ol,
+  ul {
+    padding-left: 0;
+  }
+}

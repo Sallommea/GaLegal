@@ -1,0 +1,59 @@
+<section>
+  <div
+    class="container-custom section-1"
+    *ngIf="practiceAreas$ | async as practiceAreas; else loading"
+  >
+    <div class="row mb-5">
+      <div class="flex-center">
+        <p class="section-2-title">{{ "HOME.PRACTICEAREAS" | translate }}</p>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div
+          *ngFor="let areas of practiceAreas"
+          class="col-lg-4 col-md-6 col-sm-6 try album-card pb-5"
+        >
+          <app-card
+            (open)="openModal($event)"
+            [id]="areas.id"
+            [card]="areas.title"
+          ></app-card>
+        </div>
+      </div>
+      <div class="yellow-bc">
+        <div class="container-custom flex-column content">
+          <h1>{{ "PRACTICEAREAS.WHYUS" | translate }}</h1>
+          <ul class="sector-2-content">
+            <li>
+              <img src="../../../assets/checkmark-done.svg" alt="" />
+              <p>
+                {{ "PRACTICEAREAS.REASON1" | translate }}
+              </p>
+            </li>
+            <li>
+              <img src="../../../assets/checkmark-done.svg" alt="" />
+
+              <p>
+                {{ "PRACTICEAREAS.REASON2" | translate }}
+              </p>
+            </li>
+            <li>
+              <img src="../../../assets/checkmark-done.svg" alt="" />
+              <p>
+                {{ "PRACTICEAREAS.REASON3" | translate }}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<ng-template #loading>
+  <app-loading-spinner></app-loading-spinner>
+</ng-template>
+<app-details
+  [title]="(foundItem$ | async)?.title"
+  [description]="(foundItem$ | async)?.content"
+></app-details>

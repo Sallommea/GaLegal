@@ -1,0 +1,249 @@
+.sidebar-nav {
+  padding: 20rem;
+  width: 35rem;
+  height: 100%;
+  background: #333333;
+  border-top: 2px solid #cba013;
+  position: relative;
+  top: 0;
+  border-bottom-right-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+h1 {
+  font-size: 5rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.mb {
+  margin-bottom: 15rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+
+  margin: 0 auto;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  padding-right: 3rem;
+  margin-right: 0;
+}
+img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #ffffffbe;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.td-actions a {
+  padding: 1rem 3rem;
+  border-radius: 1.6rem;
+  color: #ffffffbe;
+  border: 2px solid #cba01382;
+}
+.li {
+  width: 100%;
+  display: flex;
+}
+
+/* table */
+.id_name {
+  color: #ffffffbe;
+}
+
+table {
+  border-radius: 10px;
+  width: 100%;
+  border-color: #dee2e600;
+  margin-top: 10px;
+  background-color: #333333;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.table {
+  background-color: #333333;
+}
+table.table > :not(caption) > * > * {
+  background-color: #333333;
+}
+thead {
+  background-color: #cba013;
+}
+.table tbody tr td {
+  background-color: #333333;
+}
+th,
+td {
+  padding: 20px;
+}
+.head {
+  border-bottom: 1px solid rgba(8, 19, 41, 1);
+}
+td {
+  color: #ffffffbe;
+  /* border-top: 1px solid rgba(8, 19, 41, 1); */
+  border-bottom: black;
+  /* width: 50rem; */
+}
+
+th {
+  color: #ffffffbe;
+  font-style: normal;
+  font-family: "NotoSansGeorgian-Bold";
+  font-size: 1.8rem;
+  line-height: 15px;
+}
+.row.practice-table {
+  width: 100%;
+  margin: 0;
+}
+.row {
+  margin: 0;
+}
+.table_wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(226, 178, 21);
+  width: 100%;
+}
+.practice-row {
+  font-size: 1.8rem;
+}
+@media (max-width: 768px) {
+  .table_wrapper {
+    background-color: transparent;
+  }
+  .table thead {
+    display: none;
+  }
+  .table {
+    background-color: transparent;
+  }
+  .td-actions a {
+    display: block;
+    text-align: center;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 15px;
+  }
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table td {
+    border-top: 1px solid rgba(8, 19, 41, 1);
+  }
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+/* button */
+
+.btn-add-new {
+  padding: 2rem 4rem;
+  border-radius: 1.6rem;
+  font-size: 1.8rem;
+  background-color: rgb(226, 178, 21);
+  border: none;
+  font-family: "NotoSansGeorgian-Regular";
+}
+
+.flex-end-item {
+  align-self: flex-end;
+}
+.btn-add-new:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #e5ba2c;
+}
+.td-actions {
+  display: flex;
+  gap: 2rem;
+}
+.td-actions button {
+  padding: 1rem 2rem;
+
+  font-size: 1.4rem;
+  border: none;
+}
+
+.btn-details {
+}
+.btn-details:hover {
+  background-color: #cba01382;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 0 8px #cba01382;
+}
+
+@media only screen and (max-width: 1405px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 644px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  .btn-add-new {
+    padding: 2rem 2rem;
+    font-size: 1.6rem;
+  }
+  .practice-row {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  a {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 384px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .practice-row {
+    font-size: 1.4rem;
+  }
+  .btn-add-new {
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+  }
+  .grid-container {
+    grid-gap: 0;
+  }
+  .td-actions a {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+  .table td:before {
+    font-size: 1.2rem;
+  }
+}

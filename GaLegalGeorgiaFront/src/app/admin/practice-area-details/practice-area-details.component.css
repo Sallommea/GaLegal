@@ -1,0 +1,112 @@
+h1 {
+  font-size: 4.4rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.bullet-points {
+  font-family: "NotoSansGeorgian-Regular";
+  font-size: 2rem;
+}
+.flex-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.btn-details {
+  font-family: "NotoSansGeorgian-Regular";
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+.go-back {
+  background-color: rgb(226, 178, 21);
+  color: #333333;
+}
+.go-back:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #e5ba2c;
+}
+.btn-delete {
+  color: #ffffffbe;
+  background-color: #cc313d;
+}
+.delete:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #d14650;
+}
+.submit {
+  background-color: rgb(226, 178, 21);
+  color: #333333;
+}
+.submit:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #e5ba2c;
+}
+.btn-update {
+  background-color: #d4d4aa;
+}
+.btn-update:hover {
+  background-color: #ddddbb;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+
+.card {
+  background-color: #333333;
+  padding: 1rem 2rem;
+}
+
+.card-header {
+  color: #ffffffbe;
+  font-size: 2rem;
+  font-family: "NotoSansGeorgian-Regular";
+  padding-top: 2rem;
+}
+.form-label {
+  color: #ffffffbe;
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  font-family: "NotoSansGeorgian-Regular";
+}
+.input:focus {
+  color: #ffffffbe;
+  background-color: #333333;
+  border-bottom: 0.1px groove #e5ba2c90;
+  outline: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.input {
+  padding: 0.5rem 0rem;
+  background-color: #333333;
+  border: none;
+  outline: none;
+  border-bottom: 0.1px groove #e5ba2c57;
+  font-size: 1.6rem;
+  color: #ffffffbe;
+}
+@media only screen and (max-width: 1048px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 778px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 530px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  li {
+    font-size: 1.8rem;
+  }
+  .card-header {
+    font-size: 1.8rem;
+  }
+}

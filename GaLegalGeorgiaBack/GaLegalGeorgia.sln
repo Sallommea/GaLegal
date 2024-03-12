@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6FA2D8C9-D9E7-4230-87F1-01CCD7F90B3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{ED812168-E6BB-4546-90D5-5E69935499AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{58A8CA90-1A24-4E07-BECD-870340E162FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaLegalGeorgia.Domain", "GaLegalGeorgia.Domain\GaLegalGeorgia.Domain.csproj", "{0E9EBE46-4BF6-4783-A67B-71B9544CA83E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaLegalGeorgia.Application", "GaLegalGeorgia.Application\GaLegalGeorgia.Application.csproj", "{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaLegalGeorgia.Persistence", "GaLegalGeorgia.Persistence\GaLegalGeorgia.Persistence.csproj", "{089427C3-1CE6-477B-8269-FA2AD1130CCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaLegalGeorgia.Infrastructure", "GaLegalGeorgia.Infrastructure\GaLegalGeorgia.Infrastructure.csproj", "{57A100EA-9CCC-448A-94F0-38A185563FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaLegalGeorgia.Api", "GaLegalGeorgia.Api\GaLegalGeorgia.Api.csproj", "{98264D94-4757-4B6D-876C-3F1516322F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E9EBE46-4BF6-4783-A67B-71B9544CA83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9EBE46-4BF6-4783-A67B-71B9544CA83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9EBE46-4BF6-4783-A67B-71B9544CA83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9EBE46-4BF6-4783-A67B-71B9544CA83E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089427C3-1CE6-477B-8269-FA2AD1130CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089427C3-1CE6-477B-8269-FA2AD1130CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089427C3-1CE6-477B-8269-FA2AD1130CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089427C3-1CE6-477B-8269-FA2AD1130CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A100EA-9CCC-448A-94F0-38A185563FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A100EA-9CCC-448A-94F0-38A185563FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A100EA-9CCC-448A-94F0-38A185563FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A100EA-9CCC-448A-94F0-38A185563FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98264D94-4757-4B6D-876C-3F1516322F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98264D94-4757-4B6D-876C-3F1516322F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98264D94-4757-4B6D-876C-3F1516322F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98264D94-4757-4B6D-876C-3F1516322F68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E9EBE46-4BF6-4783-A67B-71B9544CA83E} = {ED812168-E6BB-4546-90D5-5E69935499AA}
+		{ED09DF8E-8532-408D-8DC8-C4AF7241C4E0} = {ED812168-E6BB-4546-90D5-5E69935499AA}
+		{089427C3-1CE6-477B-8269-FA2AD1130CCF} = {58A8CA90-1A24-4E07-BECD-870340E162FC}
+		{57A100EA-9CCC-448A-94F0-38A185563FFD} = {58A8CA90-1A24-4E07-BECD-870340E162FC}
+		{98264D94-4757-4B6D-876C-3F1516322F68} = {6FA2D8C9-D9E7-4230-87F1-01CCD7F90B3A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A4E4B2E-1D6B-4701-8395-E058EF6D49C0}
+	EndGlobalSection
+EndGlobal

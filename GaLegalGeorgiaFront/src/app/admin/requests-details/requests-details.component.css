@@ -1,0 +1,67 @@
+.grid-container-requests {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem; /* Adjust the gap according to your preference */
+
+  /* Optional: Set a height for better visualization */
+  /* height: 300px; */
+}
+
+.item {
+  border: 1px solid #333333;
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+h3 {
+  font-family: "NotoSansGeorgian-Regular";
+}
+.span-two {
+  grid-column: 1 / span 2; /* Spanning two columns */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.btn-details {
+  font-family: "NotoSansGeorgian-Regular";
+  padding: 0.8rem 2rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+.go-back {
+  background-color: rgb(226, 178, 21);
+  color: #333333;
+}
+.go-back:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #e5ba2c;
+}
+.btn-delete {
+  color: #ffffffbe;
+  background-color: #cc313d;
+}
+.delete:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #d14650;
+}
+
+@media only screen and (max-width: 497px) {
+  .grid-container-requests {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

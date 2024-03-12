@@ -1,0 +1,158 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: Mtavruli;
+  src: url(assets/mtavruli.ttf) format("truetype");
+  unicode-range: U+10A0-10FF;
+}
+@font-face {
+  font-family: NotoSansGeorgian-Extralight;
+  src: url(assets/NotoSansGeorgian-ExtraLight.ttf) format("truetype");
+}
+@font-face {
+  font-family: NotoSansGeorgian-Light;
+  src: url(assets/NotoSansGeorgian-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: NotoSansGeorgian-Bold;
+  src: url(assets/NotoSansGeorgian-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: NotoSansGeorgian-Regular;
+  src: url(assets/NotoSansGeorgian-Regular.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+body {
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  background-color: #f5f2ef;
+}
+
+nav .btn-text {
+  font-family: "Mtavruli", "Switzer-Regular";
+}
+.name a {
+  font-family: "Switzer-Regular";
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.container-custom {
+  max-width: 170rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.animateHideModal {
+  opacity: 0;
+  transform: scale(1);
+  animation: hideModal 2s forwards !important;
+}
+
+.animateShowModal {
+  opacity: 1;
+  animation: showModal 0.4s forwards;
+  transform: scale(1);
+  top: 25px;
+}
+
+@keyframes showModal {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    top: 25px;
+  }
+}
+
+@keyframes hideModal {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    top: 25px;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+    top: 50px;
+  }
+}
+
+.animateOverlayShow {
+  opacity: 1;
+  animation: appear 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animateOverlayHide {
+  opacity: 0;
+  animation: disappear 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeAway {
+  0% {
+    scale: (1);
+    opacity: 1;
+  }
+  100% {
+    scale: (0);
+    opacity: 0;
+  }
+}

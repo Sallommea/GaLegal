@@ -1,0 +1,51 @@
+.flex-column {
+  align-items: flex-start;
+}
+input {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border: transparent;
+  border-bottom: 1px solid #f5f2ef5f;
+  width: 100%;
+  background-color: inherit;
+  color: #ffffffbe;
+}
+.hint {
+  color: #ffcd27;
+
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+label {
+  color: #ffffffbe;
+
+  font-size: 1.6rem;
+}
+input:active,
+input:focus,
+input:hover {
+  outline: none;
+  color: #f5f2ef;
+  /* border-bottom: #f5f2ef; */
+}
+input:focus {
+  border-bottom: 1px solid #e3b0199f;
+}
+p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+@media only screen and (max-width: 426px) {
+  .fomr-control {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 367px) {
+  input::placeholder {
+    font-size: 1.2rem;
+  }
+}

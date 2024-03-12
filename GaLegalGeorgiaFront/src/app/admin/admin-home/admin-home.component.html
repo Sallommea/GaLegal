@@ -1,0 +1,37 @@
+<div class="grid-container">
+  <nav class="sidebar-nav grid-item">
+    <ul class="pt-5">
+      <li class="mb-5 li">
+        <img src="../../../assets/person-outline.svg" alt="" /><a>{{
+          "ADMIN.HELLO" | translate
+        }}</a>
+      </li>
+
+      <li class="li mb-5 logout">
+        <img src="../../../assets/log-out.svg" /><a (click)="onLogout()">{{
+          "ADMIN.LOGOUT" | translate
+        }}</a>
+      </li>
+      <li class="li mb-5">
+        <a
+          class="a"
+          routerLink="/admingalegal/home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ "ADMIN.PRACTICEAREAS" | translate }}</a
+        >
+      </li>
+      <li class="li">
+        <a
+          class="a"
+          routerLink="/admingalegal/home/requests"
+          routerLinkActive="active"
+          >{{ "ADMIN.CONSULTATIONREQUEST" | translate }}</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="div grid-item">
+    <router-outlet></router-outlet>
+  </div>
+</div>

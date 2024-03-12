@@ -1,0 +1,37 @@
+<div
+  class="grid-container-requests"
+  *ngIf="consultationRequestDetails$ | async as ConsultationRequestDetails"
+>
+  <div class="item">
+    <h3>{{ "FORM.FIRSTNAME" | translate }}:</h3>
+    <h3>{{ ConsultationRequestDetails.firstName }}</h3>
+  </div>
+  <div class="item">
+    <h3>{{ "FORM.LASTNAME" | translate }}:</h3>
+    <h3>{{ ConsultationRequestDetails.lastName }}</h3>
+  </div>
+  <div class="item">
+    <h3>{{ "FORM.EMAIL" | translate }}::</h3>
+    <h3>{{ ConsultationRequestDetails.email }}</h3>
+  </div>
+  <div class="item">
+    <h3>{{ "FORM.PHONE" | translate }}:</h3>
+    <h3>{{ ConsultationRequestDetails.phoneNumber }}</h3>
+  </div>
+  <div class="item span-two">
+    <h3>{{ "FORM.COMPANY" | translate }}:</h3>
+    <h3>{{ ConsultationRequestDetails.company }}</h3>
+  </div>
+  <div class="item span-two">
+    <h3>{{ "FORM.MESSAGE1" | translate }}:</h3>
+    <h3>{{ ConsultationRequestDetails.description }}</h3>
+  </div>
+  <div class="flex-buttons mb-5">
+    <a routerLink="../../" class="btn-details go-back">{{
+      "ADMIN.GOBACK" | translate
+    }}</a>
+    <button (click)="deleteRequest()" class="btn-details btn-delete delete">
+      {{ "ADMIN.DELETE" | translate }}
+    </button>
+  </div>
+</div>

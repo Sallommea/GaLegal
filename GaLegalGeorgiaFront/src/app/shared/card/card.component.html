@@ -1,0 +1,16 @@
+<div
+  class="card flex-center"
+  (mouseenter)="scaleInCard = 'scale-in'"
+  (mouseleave)="scaleInCard = 'scale-out'"
+>
+  <a
+    class="title"
+    [ngClass]="{
+      'scale-in-card': scaleInCard === 'scale-in',
+      'scale-out-card': scaleInCard === 'scale-out'
+    }"
+    (click)="onCloseModal()"
+  >
+    {{ card }}
+  </a>
+</div>

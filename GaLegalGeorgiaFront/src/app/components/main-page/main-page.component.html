@@ -1,0 +1,146 @@
+<div class="main" #main id="main">
+  <section class="red-bc">
+    <div class="container-custom vax">
+      <div class="welcome-message">
+        <h1>{{ "HOME.WELCOME" | translate }}</h1>
+        <h2>
+          {{ "HOME.WELCOMETEXT" | translate }}
+        </h2>
+        <div class="grid-container contact-info">
+          <div class="grid-item">
+            <app-button>{{ "HOME.BOOK" | translate }}</app-button>
+          </div>
+          <div class="grid-item">
+            <div class="mobile flex-column">
+              <p class="contact-us">{{ "HOME.CONTACTUS" | translate }}</p>
+              <p class="number">{{ "CONTACT.NUMBER" | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="get-to-know-us"></div>
+    </div>
+  </section>
+  <section class="blue-bc">
+    <div class="container-custom">
+      <div class="row mb-5">
+        <div class="flex-center">
+          <p class="section-2-title">{{ "HOME.PRACTICEAREAS" | translate }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          *ngFor="let area of practiceAreas$ | async"
+          class="col-lg-4 col-md-6 col-sm-12 try album-card pb-5"
+        >
+          <app-card
+            (open)="openModal($event)"
+            [card]="area.title"
+            [id]="area.id"
+          ></app-card>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="yellow-bc">
+    <div class="container-custom">
+      <div class="form-layout-grid form-grid">
+        <h2 class="head-2">
+          {{ "FORM.HEADING" | translate }}
+        </h2>
+        <div class="form-section">
+          <p class="form-title">
+            {{ "FORM.HEADINGTWO" | translate }}
+          </p>
+          <div class="form">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
+              <div class="form--grid">
+                <app-input
+                  placeholder="{{ 'FORM.PNAME' | translate }}"
+                  [control]="contactForm.controls.firstName"
+                  [isSubmitAttempted]="isSubmitted"
+                  maxlength="25"
+                >
+                  <span title
+                    >{{ "FORM.FIRSTNAME" | translate
+                    }}<span class="asterix-form">*</span></span
+                  >
+                  <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                  <span minlength>{{ "FORM.MINLENGTH" | translate }}</span>
+                </app-input>
+
+                <app-input
+                  placeholder="{{ 'FORM.PLASTNAME' | translate }}"
+                  [control]="contactForm.controls.lastName"
+                  [isSubmitAttempted]="isSubmitted"
+                  maxlength="25"
+                  ><span title
+                    >{{ "FORM.LASTNAME" | translate
+                    }}<span class="asterix-form">*</span></span
+                  >
+                  <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                  <span minlength>{{ "FORM.MINLENGTH" | translate }}</span>
+                </app-input>
+
+                <app-input
+                  placeholder="+995 595 44 55 44"
+                  [isNumber]="true"
+                  [isSubmitAttempted]="isSubmitted"
+                  [control]="contactForm.controls.phoneNumber"
+                  maxlength="13"
+                  ><span title
+                    >{{ "FORM.PHONE" | translate
+                    }}<span class="asterix-form">*</span></span
+                  >
+                  <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                  <span invalidnumber> {{ "FORM.INPHONE" | translate }}</span>
+                  <span minlength>{{ "FORM.MINLENGTH9" | translate }}</span>
+                </app-input>
+
+                <app-input
+                  placeholder="mariamgvasalia@mail.com"
+                  [control]="contactForm.controls.email"
+                  [isSubmitAttempted]="isSubmitted"
+                  maxlength="30"
+                >
+                  <span title
+                    >{{ "FORM.EMAIL" | translate
+                    }}<span class="asterix-form">*</span>
+                  </span>
+                  <span hint> {{ "FORM.REQUIRED" | translate }}</span>
+                  <span invalidemail> {{ "FORM.INEMAIL" | translate }}</span>
+                </app-input>
+
+                <div class="textarea">
+                  <app-input
+                    placeholder="{{ 'FORM.PCOMPANY' | translate }}"
+                    [control]="contactForm.controls.company"
+                  >
+                    <span title>{{ "FORM.COMPANY" | translate }}</span>
+                  </app-input>
+                </div>
+                <div class="flex-column textarea">
+                  <label class="mb-4">{{ "FORM.MESSAGE" | translate }}</label>
+                  <textarea
+                    formControlName="description"
+                    rows="10"
+                    placeholder="{{ 'FORM.PMESSAGE' | translate }}"
+                  ></textarea>
+                </div>
+
+                <app-button type="submit">{{
+                  "HOME.BOOK" | translate
+                }}</app-button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-details
+  [title]="(foundItem$ | async)?.title"
+  [description]="(foundItem$ | async)?.content"
+></app-details>
